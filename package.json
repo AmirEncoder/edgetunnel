@@ -1,0 +1,45 @@
+{
+  "name": "edgetunnel-auto",
+  "version": "2.1.0",
+  "description": "🚀 Automated edgetunnel with email-based configuration",
+  "main": "_worker.js",
+  "type": "module",
+  "scripts": {
+    "deploy": "wrangler deploy",
+    "deploy:prod": "wrangler deploy --env production",
+    "deploy:staging": "wrangler deploy --env staging",
+    "dev": "wrangler dev",
+    "dev:remote": "wrangler dev --remote",
+    "kv:create": "wrangler kv:namespace create KV",
+    "kv:create:preview": "wrangler kv:namespace create KV --preview",
+    "kv:list": "wrangler kv:key list --namespace-id=YOUR_ID",
+    "kv:get": "wrangler kv:key get --namespace-id=YOUR_ID",
+    "logs": "wrangler tail",
+    "format": "prettier --write '**/*.{js,json,md}'",
+    "lint": "eslint _worker.js"
+  },
+  "keywords": [
+    "cloudflare",
+    "workers",
+    "vless",
+    "trojan",
+    "shadowsocks",
+    "edgetunnel",
+    "vpn",
+    "proxy"
+  ],
+  "author": "Your Name",
+  "license": "MIT",
+  "devDependencies": {
+    "wrangler": "^3.50.0",
+    "prettier": "^3.2.5",
+    "eslint": "^9.0.0"
+  },
+  "engines": {
+    "node": ">=18.0.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/your-username/edgetunnel-auto.git"
+  }
+}
