@@ -1,31 +1,9 @@
-name = "edgetunnel-auto"
+name = "yas-panel"
 main = "_worker.js"
-compatibility_date = "2025-11-04"
+compatibility_date = "2026-01-01"
 keep_vars = true
-minify = true
-compatibility_flags = ["nodejs_compat"]
 
-# ========== KV Namespace ==========
-# برای ایجاد KV از دستور زیر استفاده کنید:
-# wrangler kv:namespace create KV
-# سپس ID دریافتی را در قسمت id قرار دهید
+# اضافه کردن KV
 [[kv_namespaces]]
 binding = "KV"
-id = ""  # 👈 ID KV خود را اینجا وارد کنید
-preview_id = ""  # 👈 (اختیاری) برای محیط preview
-
-# ========== متغیرهای محیطی ==========
-# این متغیرها در Cloudflare Dashboard هم قابل تنظیم هستند
-[vars]
-# ADMIN = "your_password"  # رمز مدیریت (در محیط تنظیم کنید)
-# HOST = "your-domain.com"  # دامنه شما
-# KEY = "secret_key"  # کلید برای کانفیگ‌ها
-
-# ========== محیط‌های مختلف ==========
-[env.production]
-name = "edgetunnel-prod"
-vars = { ADMIN = "prod_password", HOST = "prod.example.com" }
-
-[env.staging]
-name = "edgetunnel-staging"
-vars = { ADMIN = "staging_password", HOST = "staging.example.com" }
+id = "YOUR_KV_ID_HERE"  # از مرحله بعد دریافت می‌شود
